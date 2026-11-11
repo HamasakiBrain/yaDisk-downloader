@@ -1,0 +1,14 @@
+{
+  "name": "yandex-disk-downloader",
+  "version": "1.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": { "@zip.js/zip.js": "2.24.0" },
+  "devDependencies": { "playwright": "1.65.0" }
+}

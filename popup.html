@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yandex Disk Downloader</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="logo" aria-hidden="true">↓</div><div><h1>Yandex Disk<br>Downloader</h1><span class="tag">Все файлы · один ZIP</span></div></header>
+  <main>
+    <p class="eyebrow">ТЕКУЩИЙ СПИСОК</p>
+    <div class="stats"><div><span>Найдено файлов</span><strong id="count">—</strong></div><div><span>Общий размер</span><strong id="size">—</strong></div></div>
+    <p class="hint" id="scope">Только файлы текущего раздела. Вложенные папки не включаются.</p>
+    <button id="start" class="primary" disabled><span aria-hidden="true">↓</span> Скачать всё архивом</button>
+    <section id="activity" aria-live="polite" aria-atomic="true"><p id="status">Подключаемся к Яндекс Диску…</p><progress id="progress" max="100" aria-label="Прогресс операции"></progress><div class="progress-meta"><span id="done"></span><span id="percent"></span></div><p id="current"></p></section>
+    <div class="actions"><button id="refresh" class="secondary">Обновить список</button><button id="cancel" class="secondary" hidden>Отменить</button><button id="show" class="secondary" hidden>Показать ZIP</button></div>
+    <ul id="errors" aria-label="Ошибки файлов" hidden></ul>
+    <p id="notice" role="alert" hidden></p>
+    <button id="diagnose" class="secondary">Диагностика</button>
+    <textarea id="diagnostics" aria-label="Отчет диагностики без имен файлов и ссылок" readonly hidden rows="9"></textarea>
+  </main>
+  <footer>Локально в браузере <span>Без логинов и паролей</span></footer>
+  <script type="module" src="popup.js"></script>
+</body></html>
